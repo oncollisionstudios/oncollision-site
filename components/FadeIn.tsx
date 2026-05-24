@@ -8,7 +8,6 @@ export default function FadeIn({
 }: {
   children: React.ReactNode;
 }) {
-
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -16,27 +15,17 @@ export default function FadeIn({
     offset: ["start end", "end start"]
   });
 
-  // Symmetric fade
+  // Fade in while entering, fade out while leaving
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-    [0, 1, 1, 1, 0]
-  );
-
-  // Symmetric movement
-  const y = useTransform(
-    scrollYProgress,
-    [0, 0.25, 0.5, 0.75, 1],
-    [50, 0, -50]
+    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
   );
 
   return (
     <motion.div
       ref={ref}
-      style={{
-        opacity,
-        y
-      }}
+      style={{ opacity }}
     >
       {children}
     </motion.div>

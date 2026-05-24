@@ -24,7 +24,7 @@ export default function ParticleField() {
     ).matches;
 
     // Site-wide ambient field — denser than a single section, but spread out
-    const PARTICLE_COUNT = reducedMotion ? 80 : 250;
+    const PARTICLE_COUNT = reducedMotion ? 80 : 150;
     const CONNECT_DIST = 140;
     const MOUSE_RADIUS = 160;
     const MOUSE_FORCE = 0.6;

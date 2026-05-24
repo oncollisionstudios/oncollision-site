@@ -75,7 +75,7 @@ export default function Navbar() {
       <div className="w-full px-6 md:px-10 py-4 relative flex items-center">
 
       {/* Logo */}
-      <h1 className="text-3xl font-bold tracking-[0.2em] text-glow-soft">
+      <h1 className="text-2xl font-bold tracking-[0.2em] text-glow-soft">
         OnCollision Studio
         <sup className="text-sm tracking-normal ml-1">™</sup>
       </h1>

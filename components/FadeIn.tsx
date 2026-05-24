@@ -16,16 +16,18 @@ export default function FadeIn({
     offset: ["start end", "end start"]
   });
 
+  // Symmetric fade
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.5, 0.8, 1],
-    [0, 0.6, 1, 0.6, 0]
+    [0, 0.25, 0.5, 0.75, 1],
+    [0, 1, 1, 1, 0]
   );
 
+  // Symmetric movement
   const y = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    [40, 0, -40]
+    [50, 0, -50]
   );
 
   return (

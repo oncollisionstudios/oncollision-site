@@ -83,7 +83,7 @@ export default function Home() {
     </section>
   </FadeIn>
 
- <FadeIn>  
+ <FadeIn key="games">
   <section
   id="games"
   className="px-6 md:px-10 py-28">
@@ -227,7 +227,7 @@ export default function Home() {
 </FadeIn>
 
 
-<FadeIn>
+<FadeIn key="team">
 <section
   id="team"
   className="px-6 md:px-10 py-28">
@@ -269,7 +269,7 @@ export default function Home() {
 </section>
 </FadeIn>
 
-<FadeIn>
+<FadeIn key="devlog">
 <section
   id="devlog"
   className="px-6 md:px-10 py-28">
@@ -320,7 +320,7 @@ export default function Home() {
 </section>
 </FadeIn>
 
-<FadeIn>
+<FadeIn key="about">
 <section
   id="about"
   className="px-6 md:px-10 py-28">
@@ -362,7 +362,7 @@ export default function Home() {
 </section>
 </FadeIn>
 
-<FadeIn>
+<FadeIn key="contact">
 <section
   id="contact"
    className="px-6 md:px-10 py-28">

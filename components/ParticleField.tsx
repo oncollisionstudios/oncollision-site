@@ -148,8 +148,7 @@ export default function ParticleField() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-screen h-screen pointer-events-none"
-      style={{ zIndex: 0 }}
+      className="fixed inset-0 w-screen h-screen pointer-events-none -z-10"
       aria-hidden="true"
     />
   );

@@ -8,12 +8,23 @@ const rajdhani = Rajdhani({
   weight: ["400", "500", "600", "700"],
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={rajdhani.variable}>
-      <body>
+      <body className="bg-black">
+
+        {/* Background particles */}
         <ParticleField />
-        {children}
+
+        {/* Dark content layer */}
+        <div className="relative z-10 bg-black/85">
+          {children}
+        </div>
+
       </body>
     </html>
   );

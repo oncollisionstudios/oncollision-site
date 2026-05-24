@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -16,12 +16,11 @@ export default function FadeInOut({ children }: Props) {
   });
 
   // 0  → section top hits viewport bottom (entering)
-  // 1  → section bottom hits viewport top (leaving)
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.6, 0.8, 1],
-    [0, 1, 1, 1, 1, 0]
-  );
+  // 1  → section bottom hits viewport top (leaving
+  
+  const rangeX = [0, 0.2, 0.6, 0.8, 1]
+  const opacityRange = [0, 1, 1, 0]
+  const opacity = useTransform(scrollYProgress, rangeX, opacityRange);
 
   return (
     <motion.div ref={ref} style={{ opacity }}>

@@ -1,5 +1,4 @@
 import FadeInOut from "../FadeInOut";
-import ParticleField from "../ParticleField";
 
 export default function Hero() {
   return (
@@ -8,13 +7,10 @@ export default function Hero() {
         id="home"
         className="relative h-screen flex flex-col items-center justify-center overflow-hidden"
       >
-        {/* Background atmospherics */}
+        {/* Background atmospherics — particles live globally in layout.tsx */}
         <div className="hero-overlay" />
         <div className="hero-scanlines" />
         <div className="absolute w-150 h-150 rounded-full bg-cyan-500/15 blur-[140px] animate-pulse" />
-
-        {/* Mouse-reactive particle network */}
-        <ParticleField />
 
         {/* Hero content */}
         <div className="z-10 flex flex-col items-center">

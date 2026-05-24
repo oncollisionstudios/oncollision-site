@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090909;
+  --background: #0d1218;   /* very dark blue-gray, not pitch black */
   --foreground: #ededed;
   --accent: #00b7ff;
   --accent-soft: rgba(0, 183, 255, 0.12);
@@ -15,9 +15,12 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  background: 
+    radial-gradient(ellipse at top, rgba(0, 183, 255, 0.08), transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(122, 92, 255, 0.06), transparent 60%),
+    var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body), Arial, Helvetica, sans-serif;
 }
 
 /* Global grid background */

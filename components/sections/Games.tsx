@@ -20,7 +20,7 @@ const GAMES: Game[] = [
 function GameCard({ game }: { game: Game }) {
   return (
     <div className="group bg-zinc-900/70 backdrop-blur-md rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500 hover:scale-[1.02] transition">
-      <div className="h-56 relative bg-gradient-to-br from-cyan-500/20 via-black to-purple-500/20">
+      <div className="h-56 relative bg-linear-to-br from-cyan-500/20 via-black to-purple-500/20">
         <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-cyan-500/20">
           {game.status}
         </div>
@@ -60,7 +60,6 @@ export default function Games() {
       id="games"
       title="Games"
       subtitle="Current and upcoming projects from OnCollision"
-      maxWidth="7xl"
     >
       <div className="grid md:grid-cols-2 gap-8">
         {GAMES.map((game) => (

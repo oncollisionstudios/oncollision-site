@@ -6,7 +6,7 @@ type Member = {
 };
 
 const TEAM: Member[] = [
-  { name: "Your Name", role: "Founder / Developer" },
+  { name: "Eli Elad Machluf", role: "CEO / Developer" },
 ];
 
 function TeamCard({ member }: { member: Member }) {

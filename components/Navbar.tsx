@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Logo */}
         <h1 className="text-3xl font-bold tracking-[0.2em] text-glow-soft">
           OnCollision Studio
-          <sup className="text-xs tracking-normal ml-1">™</sup>
+          <sup className="text-sm tracking-normal ml-1">™</sup>
         </h1>
 
         {/* Desktop menu */}

@@ -17,7 +17,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  font-family: var(--font-display), Arial, Helvetica, sans-serif;
 }
 
 /* Global grid background */
@@ -62,9 +62,8 @@ body::before {
 
 /* === Glow === */
 
-/* All headings glow at hero strength */
+/* All headings glow at hero strength (font inherits from body) */
 h1, h2, h3 {
-  font-family: var(--font-display), Arial, Helvetica, sans-serif;
   text-shadow: 0 0 20px var(--accent-glow);
 }
 

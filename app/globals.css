@@ -101,12 +101,3 @@ h1, h2, h3 {
 .no-glow {
   text-shadow: none;
 }
-
-section,
-nav,
-button,
-input,
-textarea,
-.card {
-  background-color: rgba(0,0,0,0.96);
-}

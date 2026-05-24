@@ -21,7 +21,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <h1 className="text-3xl font-bold tracking-[0.2em] text-glow-soft">
-            OnCollision Studio
+          OnCollision Studio
+          <sup className="text-xs tracking-normal ml-1">™</sup>
         </h1>
 
         {/* Desktop menu */}

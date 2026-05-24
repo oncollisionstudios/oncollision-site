@@ -12,6 +12,7 @@ export default function Footer() {
         <div>
           <h3 className="font-bold tracking-[0.25em] text-glow-soft">
             OnCollision Studio
+            <sup className="text-xs tracking-normal ml-1">™</sup>
           </h3>
           <p className="text-gray-500 mt-2 text-sm">From Gamers, To Gamers.</p>
         </div>

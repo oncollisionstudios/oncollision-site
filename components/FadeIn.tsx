@@ -19,14 +19,14 @@ export default function FadeIn({
   // Symmetric fade
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.25, 0.5, 0.75, 1],
+    [0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
     [0, 1, 1, 1, 0]
   );
 
   // Symmetric movement
   const y = useTransform(
     scrollYProgress,
-    [0, 0.5, 1],
+    [0, 0.25, 0.5, 0.75, 1],
     [50, 0, -50]
   );
 

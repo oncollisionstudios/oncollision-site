@@ -14,7 +14,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
-
+  const [scrolled, setScrolled] = useState(false);
   const closeMenu = () => setMenuOpen(false);
 
   useEffect(() => {
@@ -45,9 +45,34 @@ export default function Navbar() {
       return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 50);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+      }, []);
+
       return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-gray-800">
-          <div className="w-full px-6 md:px-10 py-4 relative flex items-center">
+        <nav
+        className={`
+        fixed
+        top-0
+        left-0
+        w-full
+        z-50
+        backdrop-blur-md
+        border-b
+        border-gray-800
+        transition-all
+        duration-300
+        ${ scrolled  ? "bg-black/95 py-2": "bg-black/80 py-4"}`}>
+
+      <div className="w-full px-6 md:px-10 py-4 relative flex items-center">
 
       {/* Logo */}
       <h1 className="text-3xl font-bold tracking-[0.2em] text-glow-soft">

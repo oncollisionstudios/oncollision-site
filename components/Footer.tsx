@@ -1,33 +1,40 @@
+import {
+  FaDiscord,
+  FaInstagram,
+  FaYoutube,
+  FaGithub
+} from "react-icons/fa";
+
+import { FaXTwitter } from "react-icons/fa6";
+
 const SOCIALS = [
-  { href: "https://youtube.com", label: "YouTube" },
-  { href: "https://discord.com", label: "Discord" },
-  { href: "https://x.com", label: "X" },
-  { href: "https://www.instagram.com/oncollisionstudio/", label: "Instagram" },
-  { href: "https://github.com/oncollisionstudios", label: "GitHub" },
+  { href: "https://youtube.com", icon: <FaYoutube /> },
+  { href: "https://discord.com", icon: <FaDiscord /> },
+  { href: "https://x.com", icon: <FaXTwitter /> },
+  { href: "https://www.instagram.com/oncollisionstudio/", icon: <FaInstagram /> },
+  { href: "https://github.com/oncollisionstudios", icon: <FaGithub /> },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t backdrop-blur-md border-cyan-500/10 mt-20 py-10 px-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <div>
-          <h3 className="text-2xl font-bold tracking-[0.25em] text-glow-soft">
-            OnCollision Studio
-            <sup className="text-lg tracking-normal ml-1">™</sup>
-          </h3>
-          <p className="text-gray-500 mt-2 text-sm">From Gamers, To Gamers.</p>
-        </div>
-
-        <div className="text-2xl flex gap-8 text-gray-400">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex justify-center items-center">
+        <div className="text-2xl flex gap-16 text-white-400">
           {SOCIALS.map((s) => (
             <a
-              key={s.label}
+              key={s.href}
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-cyan-400 transition"
+              className="
+              text-cyan-200
+              hover:text-cyan-400
+              hover:scale-110
+              transition
+              duration-300
+              "
             >
-              {s.label}
+              {s.icon}
             </a>
           ))}
         </div>

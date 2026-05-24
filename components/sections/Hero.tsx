@@ -28,8 +28,7 @@ export default function Hero() {
           <div className="flex gap-6 mt-12">
             <a
               href="#games"
-              className="text-2xl px-8 py-4 rounded-xl bg-cyan-500 btn-glow hover:scale-105 transition"
-            >
+              className="text-2xl px-8 py-4 rounded-xl bg-cyan-500 btn-glow hover:scale-105 transition">
               View Games
             </a>
           </div>

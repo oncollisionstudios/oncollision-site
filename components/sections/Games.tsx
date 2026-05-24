@@ -30,14 +30,14 @@ function GameCard({ game }: { game: Game }) {
       </div>
 
       <div className="p-8">
-        <h3 className="text-3xl font-bold">{game.title}</h3>
-        <p className="mt-4 text-gray-400">{game.description}</p>
+        <h3 className="text-4xl font-bold">{game.title}</h3>
+        <p className="text-2xl mt-4 text-gray-400">{game.description}</p>
 
         <div className="flex gap-4 mt-8">
-          <button className="px-6 py-3 rounded-lg bg-cyan-500 btn-glow hover:scale-105 transition">
+          <button className="text-2xl px-6 py-3 rounded-lg bg-cyan-500 btn-glow hover:scale-105 transition">
               Details
           </button>
-          <button className="px-6 py-3 rounded-lg border border-gray-700 hover:bg-zinc-800 transition">
+          <button className="text-2xl px-6 py-3 rounded-lg border border-gray-700 hover:bg-zinc-800 transition">
             Devlog
           </button>
         </div>

@@ -15,16 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={rajdhani.variable}>
-      <body className="bg-black">
-
-        {/* Background particles */}
+      <body>
         <ParticleField />
-
-        {/* Dark content layer */}
-        <div className="relative z-10 bg-black/85">
-          {children}
-        </div>
-
+        {children}
       </body>
     </html>
   );

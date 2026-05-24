@@ -17,7 +17,7 @@ export default function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-gray-800">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <h1 className="text-3xl font-bold tracking-[0.2em] text-glow-soft">
@@ -51,7 +51,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-zinc-900 border-t border-gray-800">
+        <div className="md:hidden bg-zinc-950/95 border-t border-gray-800">
           <div className="flex flex-col p-6 gap-6">
             {NAV_LINKS.map((link) => (
               <a

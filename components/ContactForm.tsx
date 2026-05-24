@@ -92,7 +92,7 @@ export default function ContactForm() {
       </button>
 
       {status.kind === "success" && (
-        <p className="text-cyan-400">Message sent. We'll be in touch.</p>
+        <p className="text-cyan-400">Message sent. We&apos;ll be in touch.</p>
       )}
       {status.kind === "error" && (
         <p className="text-red-400">{status.message}</p>

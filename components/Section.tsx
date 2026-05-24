@@ -1,4 +1,4 @@
-import FadeIn from "./FadeIn";
+import FadeInOut from "./FadeInOut";
 
 type Props = {
   id: string;
@@ -22,7 +22,7 @@ export default function Section({
   children,
 }: Props) {
   return (
-    <FadeIn>
+    <FadeInOut>
       <section id={id} className="px-6 md:px-10 py-28">
         <div className={`${maxWidthMap[maxWidth]} mx-auto`}>
           {title && <h2 className="text-5xl font-bold mb-4">{title}</h2>}
@@ -30,6 +30,6 @@ export default function Section({
           {children}
         </div>
       </section>
-    </FadeIn>
+    </FadeInOut>
   );
 }

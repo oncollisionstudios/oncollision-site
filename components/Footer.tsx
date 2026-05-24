@@ -2,7 +2,7 @@ const SOCIALS = [
   { href: "https://youtube.com", label: "YouTube" },
   { href: "https://discord.com", label: "Discord" },
   { href: "https://x.com", label: "X" },
-  { href: "https://instagram.com", label: "Instagram" },
+  { href: "https://www.instagram.com/oncollisionstudio/", label: "Instagram" },
 ];
 
 export default function Footer() {

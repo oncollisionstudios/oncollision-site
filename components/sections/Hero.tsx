@@ -10,7 +10,7 @@ export default function Hero() {
         {/* Background atmospherics — particles live globally in layout.tsx */}
         <div className="hero-overlay" />
         <div className="hero-scanlines" />
-        <div className="absolute w-100 h-100 rounded-full bg-cyan-400/9 blur-[100px] animate-pulse" />
+        <div className="absolute w-100 h-100 rounded-full bg-cyan-500/9 blur-[150px] animate-pulse" />
 
         {/* Hero content */}
         <div className="z-10 flex flex-col items-center">

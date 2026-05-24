@@ -20,7 +20,7 @@ const GAMES: Game[] = [
 
 function GameCard({ game }: { game: Game }) {
   return (
-    <div className="group bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500 hover:scale-[1.02] transition">
+    <div className="group h-full flex flex-col bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500 hover:scale-[1.02] transition">
       <div className="h-56 relative bg-linear-to-br from-cyan-500/20 via-black to-purple-500/20">
         <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-cyan-500/20">
           {game.status}
@@ -30,7 +30,7 @@ function GameCard({ game }: { game: Game }) {
         </div>
       </div>
 
-      <div className="p-8">
+      <div className="p-8 flex flex-col flex-1">
         <h3 className="text-4xl font-bold">{game.title}</h3>
         <p className="text-2xl mt-4 text-gray-400">{game.description}</p>
 
@@ -49,7 +49,7 @@ function GameCard({ game }: { game: Game }) {
 
 function ClassifiedCard() {
   return (
-    <div className="group relative bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/10 overflow-hidden hover:border-cyan-500/40 transition">
+    <div className="group relative h-full flex flex-col bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/10 overflow-hidden hover:border-cyan-500/40 transition">
       <div className="h-56 relative bg-linear-to-br from-zinc-900 via-black to-zinc-900 overflow-hidden">
         <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-amber-500/20 text-amber-300 border border-amber-500/30">
           Classified
@@ -70,11 +70,11 @@ function ClassifiedCard() {
         </div>
 
         <div className="absolute top-4 left-4 text-xs text-gray-600 tracking-widest">
-          {/* PROJECT_02 */}
+          // PROJECT_02
         </div>
       </div>
 
-      <div className="p-8">
+      <div className="p-8 flex flex-col flex-1">
         <h3 className="text-4xl font-bold text-gray-500">
           PROJECT: <span className="text-gray-700">[REDACTED]</span>
         </h3>
@@ -97,7 +97,6 @@ function ClassifiedCard() {
 }
 
 export default function Games() {
-  // Combine into a single list so stagger indexing is correct
   const cards = [
     ...GAMES.map((game) => <GameCard key={game.codename} game={game} />),
     <ClassifiedCard key="classified" />,
@@ -109,7 +108,7 @@ export default function Games() {
       title="Games"
       subtitle="Current and upcoming projects from OnCollision"
     >
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 items-stretch">
         {cards.map((card, i) => (
           <StaggerIn key={i} index={i}>
             {card}

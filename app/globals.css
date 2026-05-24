@@ -4,7 +4,7 @@
   --background: #0d1218;   /* very dark blue-gray, not pitch black */
   --foreground: #ededed;
   --accent: #00b7ff;
-  --accent-soft: rgba(0, 183, 255, 0.18);
+  --accent-soft: rgba(0, 183, 255, 0.30);
   --accent-glow: rgba(0, 183, 255, 0.8);
   --accent-glow-strong: rgba(0, 183, 255, 1);
   --accent-secondary: rgba(122, 92, 255, 0.08);

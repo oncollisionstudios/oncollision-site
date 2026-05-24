@@ -30,6 +30,29 @@ export default function Hero() {
             </a>
           </div>
         </div>
+
+        
+        {/* Scroll cue */}
+        <a
+          href="#games"
+          aria-label="Scroll to Games section"
+          className="scroll-cue absolute bottom-10 left-1/2 -translate-x-1/2 text-cyan-300 hover:text-cyan-100 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{ filter: "drop-shadow(0 0 8px rgba(0,183,255,0.8))" }}
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </a>
       </section>
     </FadeInOut>
   );

@@ -1,4 +1,5 @@
 import Section from "../Section";
+import StaggerIn from "../StaggerIn";
 
 type Member = {
   name: string;
@@ -23,8 +24,10 @@ export default function Team() {
   return (
     <Section id="team" title="Team" subtitle="The people behind OnCollision">
       <div className="grid md:grid-cols-3 gap-8">
-        {TEAM.map((member) => (
-          <TeamCard key={member.name} member={member} />
+        {TEAM.map((member, i) => (
+          <StaggerIn key={member.name} index={i}>
+            <TeamCard member={member} />
+          </StaggerIn>
         ))}
       </div>
     </Section>

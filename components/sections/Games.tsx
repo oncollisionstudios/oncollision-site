@@ -1,4 +1,5 @@
 import Section from "../Section";
+import StaggerIn from "../StaggerIn";
 
 type Game = {
   codename: string;
@@ -49,14 +50,11 @@ function GameCard({ game }: { game: Game }) {
 function ClassifiedCard() {
   return (
     <div className="group relative bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/10 overflow-hidden hover:border-cyan-500/40 transition">
-      {/* Header — matches the real card's image area */}
       <div className="h-56 relative bg-linear-to-br from-zinc-900 via-black to-zinc-900 overflow-hidden">
-        {/* Status badge */}
         <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-amber-500/20 text-amber-300 border border-amber-500/30">
           Classified
         </div>
 
-        {/* Faint scanlines for atmosphere */}
         <div
           className="absolute inset-0 opacity-30"
           style={{
@@ -65,16 +63,14 @@ function ClassifiedCard() {
           }}
         />
 
-        {/* Redacted codename */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-4xl font-bold tracking-wider text-gray-600 select-none">
             ████████
           </div>
         </div>
 
-        {/* Corner accent */}
         <div className="absolute top-4 left-4 text-xs text-gray-600 tracking-widest">
-          {'// PROJECT_02'}
+          {/* PROJECT_02 */}
         </div>
       </div>
 
@@ -101,6 +97,12 @@ function ClassifiedCard() {
 }
 
 export default function Games() {
+  // Combine into a single list so stagger indexing is correct
+  const cards = [
+    ...GAMES.map((game) => <GameCard key={game.codename} game={game} />),
+    <ClassifiedCard key="classified" />,
+  ];
+
   return (
     <Section
       id="games"
@@ -108,10 +110,11 @@ export default function Games() {
       subtitle="Current and upcoming projects from OnCollision"
     >
       <div className="grid md:grid-cols-2 gap-8">
-        {GAMES.map((game) => (
-          <GameCard key={game.codename} game={game} />
+        {cards.map((card, i) => (
+          <StaggerIn key={i} index={i}>
+            {card}
+          </StaggerIn>
         ))}
-        <ClassifiedCard />
       </div>
     </Section>
   );

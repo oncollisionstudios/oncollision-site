@@ -1,4 +1,5 @@
 import Section from "../Section";
+import StaggerIn from "../StaggerIn";
 
 type DevlogEntry = {
   tag: string;
@@ -37,8 +38,10 @@ export default function Devlog() {
       subtitle="Development updates from OnCollision"
     >
       <div className="space-y-8">
-        {ENTRIES.map((entry) => (
-          <EntryCard key={entry.tag} entry={entry} />
+        {ENTRIES.map((entry, i) => (
+          <StaggerIn key={entry.tag} index={i}>
+            <EntryCard entry={entry} />
+          </StaggerIn>
         ))}
       </div>
     </Section>

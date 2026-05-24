@@ -21,7 +21,7 @@ const ENTRIES: DevlogEntry[] = [
 
 function EntryCard({ entry }: { entry: DevlogEntry }) {
   return (
-    <div className="bg-zinc-950/95 border border-cyan-500/20 rounded-2xl p-8">
+    <div className="bg-zinc-950/95 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20">
       <div className="text-sm text-cyan-400 mb-3">{entry.tag}</div>
       <h3 className="text-2xl font-bold mb-4">{entry.title}</h3>
       <p className="text-gray-400">{entry.body}</p>

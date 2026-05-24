@@ -48,7 +48,7 @@ function GameCard({ game }: { game: Game }) {
 
 function PlaceholderCard() {
   return (
-    <div className="border border-dashed border-gray-700 rounded-2xl p-8 flex items-center justify-center text-gray-500">
+    <div className="border border-dashed backdrop-blur-md border-gray-700 rounded-2xl p-8 flex items-center justify-center text-gray-500">
       Future Project
     </div>
   );

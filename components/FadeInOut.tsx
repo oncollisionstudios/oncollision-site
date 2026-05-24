@@ -20,7 +20,7 @@ export default function FadeInOut({ children }: Props) {
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.4, 0.8, 1],
-    [0, 1.5, 1.5, 0]
+    [0, 0.5, 0.5, 0]
   );
 
   return (

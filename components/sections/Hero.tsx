@@ -10,18 +10,18 @@ export default function Hero() {
         {/* Background atmospherics — particles live globally in layout.tsx */}
         <div className="hero-overlay" />
         <div className="hero-scanlines" />
-        <div className="absolute w-150 h-150 rounded-full bg-cyan-500/15 blur-[140px] animate-pulse" />
+        <div className="absolute w-100 h-100 rounded-full bg-cyan-500/50 blur-[100px] animate-pulse" />
 
         {/* Hero content */}
         <div className="z-10 flex flex-col items-center">
-          <h1 className="text-4xl md:text-8xl font-bold tracking-[0.2em] text-glow-soft">
+          <h1 className="text-cyan-300 text-glow text-3xl sm:text-5xl md:text-8xl font-bold tracking-[0.12em] sm:tracking-[0.2em] text-center px-4 leading-tight">
             OnCollision Studio
-            <sup className="text-xl md:text-5xl tracking-normal ml-2 align-top">
+            <sup className="text-xl md:text-5xl tracking-normal align-top">
               ™
             </sup>
           </h1>
 
-          <p className="mt-8 text-gray-400 text-lg md:text-4xl px-6 text-center">
+          <p className="mt-8 text-white-400 text-lg md:text-4xl px-6 text-center">
             From Gamers, To Gamers.
           </p>
 

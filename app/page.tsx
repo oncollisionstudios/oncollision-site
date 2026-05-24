@@ -32,15 +32,18 @@ export default function Home() {
       <div className="z-10 flex flex-col items-center">
         <h1
           className="
-            text-5xl 
-            sm:text-6xl 
-            md:text-8xl
+            text-3xl
+            sm:text-5xl
+            md:text-7xl
             font-bold
-            tracking-[0.35em]
-          "
+            tracking-[0.12em]
+            sm:tracking-[0.2em]
+            text-center
+            px-4
+            leading-tight"
           style={{
             textShadow:
-              "0 0 20px rgba(0,183,255,.8)"
+            "0 0 20px rgba(0,183,255,.8)"
           }}>
 
           OnCollision Studio

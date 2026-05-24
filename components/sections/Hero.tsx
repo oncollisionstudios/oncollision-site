@@ -1,8 +1,8 @@
-import FadeIn from "../FadeIn";
+import FadeInOut from "../FadeInOut";
 
 export default function Hero() {
   return (
-    <FadeIn>
+    <FadeInOut>
       <section
         id="home"
         className="relative h-screen flex flex-col items-center justify-center overflow-hidden"
@@ -38,6 +38,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-    </FadeIn>
+    </FadeInOut>
   );
 }

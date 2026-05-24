@@ -19,8 +19,8 @@ export default function FadeInOut({ children }: Props) {
   // 1  → section bottom hits viewport top (leaving)
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.6, 1],
-    [0.5, 1, 1, 0.5]
+    [0, 0.4, 0.8, 1],
+    [0, 1.5, 1.5, 0]
   );
 
   return (

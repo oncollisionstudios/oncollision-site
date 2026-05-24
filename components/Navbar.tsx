@@ -20,8 +20,8 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="font-bold tracking-[0.2em] text-glow-soft">
-          OnCollision Studio
+        <h1 className="text-2xl font-bold tracking-[0.2em] text-glow-soft">
+            OnCollision Studio
         </h1>
 
         {/* Desktop menu */}
@@ -30,7 +30,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="nav-link text-lg font-medium text-cyan-200 hover:text-white transition"
+              className="nav-link text-xl font-medium text-cyan-200 hover:text-white transition"
             >
               {link.label}
             </a>

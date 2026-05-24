@@ -19,7 +19,7 @@ const GAMES: Game[] = [
 
 function GameCard({ game }: { game: Game }) {
   return (
-    <div className="group bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500 hover:scale-[1.02] transition">
+    <div className="group card backdrop-blur-md rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500 hover:scale-[1.02] transition">
       <div className="h-56 relative bg-linear-to-br from-cyan-500/20 via-black to-purple-500/20">
         <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-cyan-500/20">
           {game.status}

@@ -15,9 +15,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={rajdhani.variable}>
-      <body>
+      <body className="relative bg-black">
+
+        {/* Particle background */}
         <ParticleField />
-        {children}
+
+        {/* Site content */}
+        <main className="relative z-10">
+          {children}
+        </main>
+
       </body>
     </html>
   );

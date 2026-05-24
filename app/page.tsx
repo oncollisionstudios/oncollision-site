@@ -54,7 +54,8 @@ export default function Home() {
         </p>
 
         <div className="flex gap-6 mt-12">
-          <button
+          <a
+            href="#games"
             className="
               px-8
               py-4
@@ -62,11 +63,11 @@ export default function Home() {
               bg-cyan-500
               hover:scale-105
               transition">
-
             View Games
-          </button>
+          </a>
 
-          <button
+          <a
+            href="#devlog"
             className="
               px-8
               py-4
@@ -75,9 +76,8 @@ export default function Home() {
               border-gray-700
               hover:bg-zinc-900
               transition">
-
             Devlog
-          </button>
+          </a>
         </div>
       </div>
     </section>

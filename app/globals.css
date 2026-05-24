@@ -99,3 +99,7 @@ body::before {
 
   pointer-events: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}

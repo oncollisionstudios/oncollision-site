@@ -8,17 +8,17 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-cyan-500/10 mt-20 py-10 px-10">
+    <footer className="border-t backdrop-blur-md border-cyan-500/10 mt-20 py-10 px-10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div>
-          <h3 className="font-bold tracking-[0.25em] text-glow-soft">
+          <h3 className="text-2xl font-bold tracking-[0.25em] text-glow-soft">
             OnCollision Studio
-            <sup className="text-sm tracking-normal ml-1">™</sup>
+            <sup className="text-lg tracking-normal ml-1">™</sup>
           </h3>
           <p className="text-gray-500 mt-2 text-sm">From Gamers, To Gamers.</p>
         </div>
 
-        <div className="flex gap-8 text-gray-400">
+        <div className="text-2xl flex gap-8 text-gray-400">
           {SOCIALS.map((s) => (
             <a
               key={s.label}

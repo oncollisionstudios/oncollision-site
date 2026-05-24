@@ -151,6 +151,6 @@ export default function ParticleField() {
     className="fixed inset-0 w-screen h-screen pointer-events-none"
     style={{ zIndex: 0 }}
     aria-hidden="true"
-    />
-  );
+  />
+);
 }

@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <footer className="border-t backdrop-blur-md border-cyan-500/10 mt-20 py-10 px-10">
       <div className="max-w-7xl mx-auto px-6 py-8 flex justify-center items-center">
-        <div className="text-2xl flex gap-16 text-white-400">
+        <div className="text-4xl flex gap-16 text-white-400">
           {SOCIALS.map((s) => (
             <a
               key={s.href}
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center text-gray-600 text-sm mt-8">
+      <div className="text-center text-gray-600 text-2xl mt-8">
         © {new Date().getFullYear()} OnCollision Studio. All rights reserved.
       </div>
     </footer>

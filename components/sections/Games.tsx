@@ -70,7 +70,7 @@ function ClassifiedCard() {
         </div>
 
         <div className="absolute top-4 left-4 text-xs text-gray-600 tracking-widest">
-          // PROJECT_02
+          {"// PROJECT_02"}
         </div>
       </div>
 

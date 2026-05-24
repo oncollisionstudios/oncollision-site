@@ -4,7 +4,7 @@
   --background: #0d1218;
   --foreground: #ededed;
   --accent: #00b7ff;
-  --accent-soft: rgba(0, 183, 255, 0.18);
+  --accent-soft: rgba(0, 183, 255, 0.06);
   --accent-glow: rgba(0, 183, 255, 0.8);
   --accent-glow-strong: rgba(0, 183, 255, 1);
   --accent-secondary: rgba(122, 92, 255, 0.08);
@@ -70,7 +70,7 @@ h1, h2, h3 {
 }
 
 .text-glow {
-  text-shadow: 0 0 20px var(--accent-glow);
+  text-shadow: 0 0 12px var(--accent-glow);
 }
 
 .text-glow-soft {

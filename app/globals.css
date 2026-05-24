@@ -6,6 +6,7 @@
   --accent: #00b7ff;
   --accent-soft: rgba(0, 183, 255, 0.12);
   --accent-glow: rgba(0, 183, 255, 0.8);
+  --accent-glow-strong: rgba(0, 183, 255, 1);
   --accent-secondary: rgba(122, 92, 255, 0.08);
 }
 
@@ -59,10 +60,34 @@ body::before {
   pointer-events: none;
 }
 
+/* === Glow utilities === */
+
+/* Global heading glow — applies to every h1/h2/h3 site-wide */
+h1, h2, h3 {
+  text-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* Strong glow for hero headline */
 .text-glow {
   text-shadow: 0 0 20px var(--accent-glow);
 }
 
+/* Soft glow for smaller logos / footer */
 .text-glow-soft {
   text-shadow: 0 0 10px rgba(0, 183, 255, 0.6);
+}
+
+/* Add this class to any button you want to glow */
+.btn-glow {
+  box-shadow: 0 0 20px var(--accent-glow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 32px var(--accent-glow-strong);
+}
+
+/* Opt-out — add to a heading that you DON'T want glowing */
+.no-glow {
+  text-shadow: none;
 }

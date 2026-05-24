@@ -86,7 +86,7 @@ export default function ContactForm() {
       <button
         onClick={sendEmail}
         disabled={status.kind === "loading"}
-        className="px-8 py-4 rounded-xl bg-cyan-500 hover:scale-105 transition disabled:opacity-50 disabled:hover:scale-100"
+        className="px-8 py-4 rounded-xl bg-cyan-500 btn-glow hover:scale-105 transition disabled:opacity-50 disabled:hover:scale-100"
       >
         {status.kind === "loading" ? "Sending..." : "Send Message"}
       </button>

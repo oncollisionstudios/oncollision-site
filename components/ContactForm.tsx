@@ -55,7 +55,7 @@ export default function ContactForm() {
   }
 
   const inputClasses =
-    "w-full bg-black border border-gray-700 rounded-lg p-4 focus:border-cyan-500 focus:outline-none transition";
+    "w-full bg-black/95 border border-gray-700 rounded-lg p-4 focus:border-cyan-500 focus:outline-none transition";
 
   return (
     <div className="space-y-6">

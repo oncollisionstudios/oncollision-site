@@ -60,24 +60,22 @@ body::before {
   pointer-events: none;
 }
 
-/* === Glow utilities === */
+/* === Glow === */
 
-/* Global heading glow — applies to every h1/h2/h3 site-wide */
+/* All headings glow at hero strength */
 h1, h2, h3 {
-  text-shadow: 0 0 12px var(--accent-glow);
+  text-shadow: 0 0 20px var(--accent-glow);
 }
 
-/* Strong glow for hero headline */
 .text-glow {
   text-shadow: 0 0 20px var(--accent-glow);
 }
 
-/* Soft glow for smaller logos / footer */
 .text-glow-soft {
   text-shadow: 0 0 10px rgba(0, 183, 255, 0.6);
 }
 
-/* Add this class to any button you want to glow */
+/* Cyan buttons glow — opt in with .btn-glow */
 .btn-glow {
   box-shadow: 0 0 20px var(--accent-glow);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -87,7 +85,20 @@ h1, h2, h3 {
   box-shadow: 0 0 32px var(--accent-glow-strong);
 }
 
-/* Opt-out — add to a heading that you DON'T want glowing */
+/* Navbar links — visible glow at rest, intense on hover */
+.nav-link {
+  text-shadow: 0 0 12px var(--accent-glow);
+  transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  text-shadow:
+    0 0 8px var(--accent-glow-strong),
+    0 0 20px var(--accent-glow-strong),
+    0 0 36px var(--accent-glow);
+}
+
+/* Escape hatch — disable glow on a specific heading */
 .no-glow {
   text-shadow: none;
 }

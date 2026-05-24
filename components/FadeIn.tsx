@@ -1,27 +1,39 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function FadeIn({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.7, 1],
+    [0, 1, 1, 0]
+  );
+
+  const y = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.7, 1],
+    [50, 0, 0, -50]
+  );
+
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        y: 50
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0
-      }}
-      viewport={{
-        once: true
-      }}
-      transition={{
-        duration: 0.7
+      ref={ref}
+      style={{
+        opacity,
+        y
       }}
     >
       {children}

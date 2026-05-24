@@ -86,23 +86,16 @@ export default function Home() {
  <FadeIn>  
   <section
   id="games"
-  className="min-h-screen px-10 py-24"
->
-
+  className="px-6 md:px-10 py-16">
   <div className="max-w-7xl mx-auto">
-
     <h2 className="text-5xl font-bold mb-4">
       Games
     </h2>
-
     <p className="text-gray-400 mb-12">
       Current and upcoming projects from OnCollision
     </p>
-
     <div className="grid md:grid-cols-2 gap-8">
-
       {/* Project Velocity */}
-
       <div
         className="
           group
@@ -237,7 +230,7 @@ export default function Home() {
 <FadeIn>
 <section
   id="team"
-  className="min-h-screen px-10 py-24">
+  className="px-6 md:px-10 py-16">
   <div className="max-w-6xl mx-auto">
     <h2 className="text-5xl font-bold mb-4">
       Team
@@ -279,7 +272,7 @@ export default function Home() {
 <FadeIn>
 <section
   id="devlog"
-  className="min-h-screen px-10 py-24">
+  className="px-6 md:px-10 py-16">
   <div className="max-w-6xl mx-auto">
 
     <h2 className="text-5xl font-bold mb-4">
@@ -330,7 +323,7 @@ export default function Home() {
 <FadeIn>
 <section
   id="about"
-  className="min-h-screen px-10 py-24">
+  className="px-6 md:px-10 py-16">
   <div className="max-w-6xl mx-auto">
     <h2 className="text-5xl font-bold mb-4">
       About
@@ -372,7 +365,7 @@ export default function Home() {
 <FadeIn>
 <section
   id="contact"
-  className="min-h-screen px-10 py-24">
+   className="px-6 md:px-10 py-16">
   <div className="max-w-4xl mx-auto">
 
     <h2 className="text-5xl font-bold mb-4">

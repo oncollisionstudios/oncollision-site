@@ -13,21 +13,19 @@ export default function FadeIn({
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 90%", "start 40%"]
+    offset: ["start end", "end start"]
   });
 
-  // Softer fade
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.5, 1],
-    [0.3, 0.7, 1]
+    [0, 0.2, 0.5, 0.8, 1],
+    [0, 0.6, 1, 0.6, 0]
   );
 
-  // Small movement only
   const y = useTransform(
     scrollYProgress,
-    [0, 1],
-    [30, 0]
+    [0, 0.5, 1],
+    [40, 0, -40]
   );
 
   return (

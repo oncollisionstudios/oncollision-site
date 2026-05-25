@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
 import "./globals.css";
 import ParticleField from "../components/ParticleField";
+import Terminal from "../components/Terminal";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
@@ -9,13 +10,12 @@ const rajdhani = Rajdhani({
   weight: ["400", "500", "600", "700"],
 });
 
-// Update SITE_URL to your real domain when ready (vercel.app or custom).
 const SITE_URL = "https://www.oncollisionstudio.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "OnCollision Studio — From Gamers, To Gamers",
+    default: "OnCollision Studio — Mobile FPS Games From Gamers, To Gamers",
     template: "%s | OnCollision Studio",
   },
   description:
@@ -78,6 +78,7 @@ export default function RootLayout({
       <body>
         <ParticleField />
         {children}
+        <Terminal />
       </body>
     </html>
   );

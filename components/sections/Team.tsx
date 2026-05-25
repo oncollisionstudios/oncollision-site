@@ -1,13 +1,34 @@
 import Section from "../Section";
 import StaggerIn from "../StaggerIn";
+import { FaLinkedin } from "react-icons/fa";
 
 type Member = {
   name: string;
   role: string;
+  linkedin: string;
 };
 
 const TEAM: Member[] = [
-  { name: "Eli Elad Machluf", role: "CEO / Developer" },
+  {
+    name: "Elad Machluf",
+    role: "CEO / Founder",
+    linkedin: "https://www.linkedin.com/in/elad-machluf/",
+  },
+  {
+    name: "Hadas Seegel",
+    role: "CMO / Chief Marketing Officer",
+    linkedin: "https://www.linkedin.com/in/username/",
+  },
+  {
+    name: "Member Three",
+    role: "Role / Position",
+    linkedin: "https://www.linkedin.com/in/username/",
+  },
+  {
+    name: "Member Four",
+    role: "Role / Position",
+    linkedin: "https://www.linkedin.com/in/username/",
+  },
 ];
 
 function TeamCard({ member }: { member: Member }) {
@@ -16,6 +37,16 @@ function TeamCard({ member }: { member: Member }) {
       <div className="w-24 h-24 rounded-full bg-cyan-500/20 mb-6" />
       <h3 className="text-3xl font-bold">{member.name}</h3>
       <p className="text-2xl text-gray-400 mt-2">{member.role}</p>
+
+      <a
+        href={member.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${member.name} on LinkedIn`}
+        className="mt-6 inline-flex items-center gap-2 text-3xl text-cyan-300 hover:text-cyan-400 hover:scale-110 transition w-fit"
+      >
+        <FaLinkedin />
+      </a>
     </div>
   );
 }
@@ -23,7 +54,7 @@ function TeamCard({ member }: { member: Member }) {
 export default function Team() {
   return (
     <Section id="team" title="Team" subtitle="The people behind OnCollision">
-      <div className="grid md:grid-cols-3 gap-8 items-stretch">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
         {TEAM.map((member, i) => (
           <StaggerIn key={member.name} index={i}>
             <TeamCard member={member} />

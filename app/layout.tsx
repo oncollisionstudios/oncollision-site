@@ -15,11 +15,11 @@ const SITE_URL = "https://oncollisionstudio.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "OnCollision Studio — Mobile FPS Games From Gamers, To Gamers",
+    default: "OnCollision Studio — From Gamers, To Gamers",
     template: "%s | OnCollision Studio",
   },
   description:
-    "Independent game studio building fast, immersive mobile FPS experiences. Now developing PROJECT: VELOCITY — futuristic weapons and movement-driven combat.",
+    "Independent game studio building fast, immersive FPS experiences.",
   keywords: [
     "OnCollision Studio",
     "indie game studio",

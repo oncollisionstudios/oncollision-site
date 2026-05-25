@@ -23,8 +23,7 @@ const SOCIALS = [
 ];
 
 const LEGAL_LINKS = [
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "#contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy Policy" }
 ];
 
 export default function Footer() {

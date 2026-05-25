@@ -53,7 +53,7 @@ function TeamCard({ member }: { member: Member }) {
 
 export default function Team() {
   return (
-    <Section id="team" title="Team" subtitle="The people behind OnCollision">
+    <Section id="team" title="Our Team" subtitle="The people behind OnCollision">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
         {TEAM.map((member, i) => (
           <StaggerIn key={member.name} index={i}>

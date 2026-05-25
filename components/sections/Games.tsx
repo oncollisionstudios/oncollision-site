@@ -14,7 +14,7 @@ const GAMES: Game[] = [
     title: "PROJECT: VELOCITY",
     status: "In Development",
     description:
-      "Fast-paced mobile FPS combat with futuristic weapons, movement mechanics and competitive gameplay.",
+      "Fast-paced FPS combat with futuristic weapons, movement mechanics and competitive gameplay.",
   },
 ];
 
@@ -109,6 +109,7 @@ export default function Games() {
   return (
     <Section
       id="games"
+      number={1}
       title="Games"
       subtitle="Current and upcoming projects from OnCollision"
     >

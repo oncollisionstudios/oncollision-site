@@ -87,10 +87,11 @@ function EntryCard({ entry }: { entry: DevlogEntry }) {
 export default function Devlog() {
   return (
     <Section
-      id="devlog"
-      title="Devlog"
-      subtitle="Development updates from OnCollision"
-    >
+        id="devlog"
+        number={2}
+        title="Devlog"
+        subtitle="Development updates from OnCollision"
+      >
       <div className="space-y-8">
         {ENTRIES.map((entry, i) => (
           <StaggerIn key={entry.version} index={i}>

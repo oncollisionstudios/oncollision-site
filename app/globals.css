@@ -227,3 +227,20 @@ h1, h2, h3 {
     opacity: 0;
   }
 }
+
+/* === Section marker (01 / GAMES) === */
+
+.section-marker-number {
+  text-shadow: 0 0 12px rgba(0, 183, 255, 0.6);
+}
+
+.section-marker-divider {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 183, 255, 0.8),
+    rgba(0, 183, 255, 0)
+  );
+}

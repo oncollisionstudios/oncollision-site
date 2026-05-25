@@ -54,8 +54,10 @@ export default function ContactForm() {
     }
   }
 
+  const isLoading = status.kind === "loading";
+
   const inputClasses =
-    "w-full bg-black/95 border border-gray-700 rounded-lg p-4 focus:border-cyan-500 focus:outline-none transition";
+    "w-full bg-black/95 border border-gray-700 rounded-lg p-4 focus:border-cyan-500 focus:outline-none transition disabled:opacity-50";
 
   return (
     <div className="space-y-6">
@@ -64,6 +66,7 @@ export default function ContactForm() {
         onChange={update("name")}
         type="text"
         placeholder="Name"
+        disabled={isLoading}
         className={inputClasses}
       />
 
@@ -72,6 +75,7 @@ export default function ContactForm() {
         onChange={update("email")}
         type="email"
         placeholder="Email"
+        disabled={isLoading}
         className={inputClasses}
       />
 
@@ -80,15 +84,35 @@ export default function ContactForm() {
         onChange={update("message")}
         rows={6}
         placeholder="Message"
+        disabled={isLoading}
         className={inputClasses}
       />
 
       <button
         onClick={sendEmail}
-        disabled={status.kind === "loading"}
-        className="px-8 py-4 rounded-xl bg-cyan-500 btn-glow hover:scale-105 transition disabled:opacity-50 disabled:hover:scale-100"
+        disabled={isLoading}
+        className={`
+          relative
+          px-8 py-4
+          rounded-xl
+          bg-cyan-500
+          btn-glow
+          transition
+          overflow-hidden
+          disabled:cursor-wait
+          ${isLoading ? "send-button-loading" : "hover:scale-105"}
+        `}
       >
-        {status.kind === "loading" ? "Sending..." : "Send Message"}
+        <span className="relative z-10 inline-flex items-center gap-3">
+          {isLoading ? (
+            <>
+              <SpinnerIcon />
+              Transmitting...
+            </>
+          ) : (
+            "Send Message"
+          )}
+        </span>
       </button>
 
       {status.kind === "success" && (
@@ -98,5 +122,33 @@ export default function ContactForm() {
         <p className="text-red-400">{status.message}</p>
       )}
     </div>
+  );
+}
+
+/** Small spinning cyan ring rendered as SVG for crisp animation. */
+function SpinnerIcon() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="animate-spin"
+      aria-hidden="true"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="rgba(255,255,255,0.25)"
+        strokeWidth="3"
+      />
+      <path
+        d="M22 12a10 10 0 0 0-10-10"
+        stroke="white"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
   );
 }

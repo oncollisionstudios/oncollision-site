@@ -180,3 +180,50 @@ h1, h2, h3 {
     transform: translateX(-100%);
   }
 }
+
+/* === Contact form loading state === */
+
+.send-button-loading {
+  animation: send-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes send-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 183, 255, 0.6);
+  }
+  50% {
+    box-shadow:
+      0 0 32px rgba(0, 183, 255, 1),
+      0 0 60px rgba(0, 183, 255, 0.5);
+  }
+}
+
+/* Sliding shimmer across the button while loading */
+.send-button-loading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  animation: send-shimmer 1.5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes send-shimmer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .send-button-loading {
+    animation: none;
+  }
+  .send-button-loading::before {
+    animation: none;
+    opacity: 0;
+  }
+}

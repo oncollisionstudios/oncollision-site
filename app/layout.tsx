@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "OnCollision Studio",
     title: "OnCollision Studio — From Gamers, To Gamers",
     description:
-      "Independent game studio building fast, immersive mobile FPS experiences. Now developing PROJECT: VELOCITY.",
+      "Independent game studio building fast, immersive FPS experiences.",
     images: [
       {
         url: "/og-image.png",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OnCollision Studio — From Gamers, To Gamers",
     description:
-      "Independent game studio building fast, immersive mobile FPS experiences.",
+      "Independent game studio building fast, immersive FPS experiences.",
     images: ["/og-image.png"],
   },
   robots: {

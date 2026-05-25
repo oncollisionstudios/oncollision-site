@@ -21,7 +21,6 @@ export default function Hero() {
           <p className="mt-8 text-white text-lg md:text-4xl px-6 text-center">
             From Gamers, To Gamers.
           </p>
-
           <div className="flex gap-6 mt-12">
             <a
               href="#games"

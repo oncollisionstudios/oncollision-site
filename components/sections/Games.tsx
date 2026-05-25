@@ -20,12 +20,16 @@ const GAMES: Game[] = [
 
 function GameCard({ game }: { game: Game }) {
   return (
-    <div className="group h-full flex flex-col bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500 hover:scale-[1.02] transition">
-      <div className="h-56 relative bg-linear-to-br from-cyan-500/20 via-black to-purple-500/20">
-        <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-cyan-500/20">
+    <div className="game-card group h-full flex flex-col bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/20 overflow-hidden transition-all duration-500">
+      <div className="h-56 relative bg-linear-to-br from-cyan-500/20 via-black to-purple-500/20 overflow-hidden">
+        {/* Sliding sheen on hover */}
+        <div className="game-card-sheen absolute inset-0 pointer-events-none" />
+
+        <div className="game-card-badge absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-cyan-500/20 border border-cyan-500/30">
           {game.status}
         </div>
-        <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-cyan-400/60">
+
+        <div className="game-card-codename absolute inset-0 flex items-center justify-center text-4xl font-bold text-cyan-400/60 transition-all duration-500">
           {game.codename}
         </div>
       </div>
@@ -49,14 +53,14 @@ function GameCard({ game }: { game: Game }) {
 
 function ClassifiedCard() {
   return (
-    <div className="group relative h-full flex flex-col bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/10 overflow-hidden hover:border-cyan-500/40 transition">
+    <div className="group relative h-full flex flex-col bg-zinc-950/95 backdrop-blur-md rounded-2xl border border-cyan-500/10 overflow-hidden hover:border-amber-500/30 transition-all duration-500">
       <div className="h-56 relative bg-linear-to-br from-zinc-900 via-black to-zinc-900 overflow-hidden">
-        <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-amber-500/20 text-amber-300 border border-amber-500/30">
+        <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-sm bg-amber-500/20 text-amber-300 border border-amber-500/30 group-hover:bg-amber-500/30 transition">
           Classified
         </div>
 
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
           style={{
             backgroundImage:
               "repeating-linear-gradient(to bottom, transparent, transparent 3px, rgba(255,255,255,0.04) 4px)",
@@ -64,13 +68,13 @@ function ClassifiedCard() {
         />
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-4xl font-bold tracking-wider text-gray-600 select-none">
+          <div className="text-4xl font-bold tracking-wider text-gray-600 select-none group-hover:text-gray-500 transition">
             ████████
           </div>
         </div>
 
-        <div className="absolute top-4 left-4 text-xs text-gray-600 tracking-widest">
-          {"// PROJECT_02"}
+        <div className="absolute top-4 left-4 text-xs text-gray-600 tracking-widest group-hover:text-amber-300/60 transition">
+          // PROJECT_02
         </div>
       </div>
 

@@ -111,3 +111,72 @@ h1, h2, h3 {
     0 0 24px rgba(0, 183, 255, 0.6),
     0 0 48px rgba(0, 183, 255, 0.4);
 }
+
+/* === Game card hover === */
+
+/* Lift + glowing border + shadow */
+.game-card {
+  transition: transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  border-color: rgba(0, 183, 255, 0.8);
+  box-shadow:
+    0 0 0 1px rgba(0, 183, 255, 0.3),
+    0 0 40px rgba(0, 183, 255, 0.25),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Codename in the image area brightens and grows */
+.game-card:hover .game-card-codename {
+  color: rgba(0, 183, 255, 0.9);
+  text-shadow: 0 0 20px rgba(0, 183, 255, 0.6);
+  letter-spacing: 0.05em;
+}
+
+/* Status badge pulses */
+.game-card:hover .game-card-badge {
+  background: rgba(0, 183, 255, 0.35);
+  border-color: rgba(0, 183, 255, 0.7);
+  animation: badge-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 183, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(0, 183, 255, 0);
+  }
+}
+
+/* Sliding sheen that crosses the image on hover */
+.game-card-sheen {
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(0, 183, 255, 0.15) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+
+.game-card:hover .game-card-sheen {
+  transform: translateX(100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-card:hover {
+    transform: none;
+  }
+  .game-card:hover .game-card-badge {
+    animation: none;
+  }
+  .game-card:hover .game-card-sheen {
+    transform: translateX(-100%);
+  }
+}

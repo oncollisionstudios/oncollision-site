@@ -10,7 +10,7 @@ const rajdhani = Rajdhani({
 });
 
 // Update SITE_URL to your real domain when ready (vercel.app or custom).
-const SITE_URL = "https://oncollisionstudio.com";
+const SITE_URL = "https://www.oncollisionstudio.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

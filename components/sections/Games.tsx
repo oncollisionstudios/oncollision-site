@@ -74,7 +74,7 @@ function ClassifiedCard() {
         </div>
 
         <div className="absolute top-4 left-4 text-xs text-gray-600 tracking-widest group-hover:text-amber-300/60 transition">
-          // PROJECT_02
+          {"// PROJECT_02"}
         </div>
       </div>
 
